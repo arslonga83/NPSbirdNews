@@ -10,6 +10,7 @@ getNews();
 
 //call the create card function for each array in the data received
 const filterNews = (news) => {
+  content.innerHTML = '';
   news.data.forEach(array => {
    createCard(array);
   })
@@ -30,3 +31,18 @@ const createCard = (array) => {
   url.textContent = array.url;
 }
 
+
+const submit = document.getElementById('submit');
+const search = document.getElementById('search');
+
+submit.addEventListener('click', () => {
+  console.log('click');
+  const value = search.value;
+  const newSearch = async function () {
+    const response = await fetch(`https://developer.nps.gov/api/v1/newsreleases?q=${value}&api_key=DrgGqSQI0K3HuUTWpnDxfSVbOIWaUSiITaC1GrlQ`);
+    const search = await response.json();
+   console.log(search);
+    filterNews(search);
+  }
+  newSearch();
+})

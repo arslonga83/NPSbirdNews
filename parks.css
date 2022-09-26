@@ -21,11 +21,23 @@ h3, h4 {
   background: lightgray;
 }
 
-
-
 h3 {
   border: 2px solid black;
   padding: 8px;
+  margin-bottom: 8px;
+}
+
+#alternate {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+input, button {
+  padding: 8px;
+  width: 200px;
+  margin: 24px;
+  background: lightgrey;
 }
 
 footer {
@@ -47,4 +59,6 @@ footer {
   border: 2px solid black;
   padding: 24px;
   background: lightgrey;
+  display: flex;
+  flex-wrap: wrap;
 }
