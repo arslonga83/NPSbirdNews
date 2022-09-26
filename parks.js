@@ -41,8 +41,16 @@ submit.addEventListener('click', () => {
   const newSearch = async function () {
     const response = await fetch(`https://developer.nps.gov/api/v1/newsreleases?q=${value}&api_key=DrgGqSQI0K3HuUTWpnDxfSVbOIWaUSiITaC1GrlQ`);
     const search = await response.json();
-   console.log(search);
+    console.log(search);
     filterNews(search);
+    updateHeader(value);
   }
   newSearch();
 })
+
+const updateHeader = (value) => {
+  const h1 = document.querySelector('h1');
+  const h3 = document.querySelector('h3');
+  h1.textContent = `NPS ${value} NEWS`;
+  h3.textContent = `Read the latest ${value}-related news from the National Park Service`
+}
