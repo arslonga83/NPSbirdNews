@@ -38,6 +38,11 @@ input, button {
   width: 200px;
   margin: 24px;
   background: lightgrey;
+  text-align: center;
+}
+
+button {
+  font-weight: bolder;
 }
 
 footer {
