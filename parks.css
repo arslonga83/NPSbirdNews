@@ -1,0 +1,50 @@
+html {
+  background: url(johannes-andersson-UCd78vfC8vU-unsplash.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  background:lightgray;
+  border: 2px solid black;
+}
+
+h3, h4 {
+  text-align: center;
+  font-size: 2rem;
+  background: lightgray;
+}
+
+
+
+h3 {
+  border: 2px solid black;
+  padding: 8px;
+}
+
+footer {
+  background: lightgray;
+  border: 2px solid black;
+  text-align: center;
+  margin-top: 48px;
+
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 36px;
+}
+
+.card {
+  width: 350px;
+  border: 2px solid black;
+  padding: 24px;
+  background: lightgrey;
+}
