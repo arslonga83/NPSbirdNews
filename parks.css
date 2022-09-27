@@ -41,6 +41,11 @@ input, button {
   text-align: center;
 }
 
+textarea:focus, input.focus {
+  outline: none;
+  border: none;
+}
+
 button {
   font-weight: bolder;
 }

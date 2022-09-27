@@ -35,9 +35,16 @@ const createCard = (array) => {
 const submit = document.getElementById('submit');
 const search = document.getElementById('search');
 
+search.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    submit.click();
+  }
+});
+
 submit.addEventListener('click', () => {
   console.log('click');
-  const value = search.value;
+  const value = search.value.toUpperCase();
+  search.value = '';
   const newSearch = async function () {
     const response = await fetch(`https://developer.nps.gov/api/v1/newsreleases?q=${value}&api_key=DrgGqSQI0K3HuUTWpnDxfSVbOIWaUSiITaC1GrlQ`);
     const search = await response.json();
